@@ -2,6 +2,8 @@
 
 A real-time interactive polling system built with React.js, Node.js, and Socket.IO. Perfect for classrooms, presentations, and interactive sessions where teachers can create polls and students can vote in real-time.
 
+**Made with ❤️ by Aman Rathour**
+
 ![Live Polling System](https://img.shields.io/badge/React-18.2.0-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-20.17.0-green)
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-4.7.2-orange)
@@ -93,6 +95,28 @@ A real-time interactive polling system built with React.js, Node.js, and Socket.
    npm start
    ```
    The application will run on `http://localhost:3000`
+
+## 📸 Screenshots
+
+### Teacher Dashboard
+![Teacher Dashboard](screenshots/teacher-dashboard.png)
+*Create polls, manage students, and view real-time results*
+
+### Student Interface
+![Student Interface](screenshots/student-interface.png)
+*Join sessions, vote on polls, and see live results*
+
+### Poll Creation
+![Poll Creation](screenshots/poll-creation.png)
+*Design custom polls with multiple options and time limits*
+
+### Real-time Results
+![Real-time Results](screenshots/real-time-results.png)
+*Live voting results with progress bars and percentages*
+
+### Chat System
+![Chat System](screenshots/chat-system.png)
+*Real-time communication between teachers and students*
 
 ## 🚀 Usage
 
@@ -245,6 +269,6 @@ If you have any questions or need support:
 
 ---
 
-**Made with ❤️ for interactive learning and real-time engagement**
+**Made with ❤️ by Aman Rathour for interactive learning and real-time engagement**
 
 *Intervue Poll - Making learning interactive and engaging* 
