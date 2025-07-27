@@ -10,20 +10,40 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
-    methods: ["GET", "POST"]
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS (Socket.IO)"));
+      }
+    },
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
+
 
 // Trust proxy for rate limiting
 app.set('trust proxy', 1);
 
 // Middleware
 app.use(helmet());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://live-polling-system-frontttttt.onrender.com"
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:3000",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
+
 
 // Rate limiting
 const limiter = rateLimit({
