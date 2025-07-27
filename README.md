@@ -98,25 +98,29 @@ A real-time interactive polling system built with React.js, Node.js, and Socket.
 
 ## 📸 Screenshots
 
-### Teacher Dashboard
-![Teacher Dashboard](screenshots/teacher-dashboard.png)
-*Create polls, manage students, and view real-time results*
+### Welcome Screen
+![Welcome Screen](https://i.imgur.com/example1.png)
+*Clean and modern welcome interface with role selection for students and teachers*
 
-### Student Interface
-![Student Interface](screenshots/student-interface.png)
-*Join sessions, vote on polls, and see live results*
+### Teacher Dashboard - Poll Creation
+![Teacher Dashboard - Poll Creation](https://i.imgur.com/example2.png)
+*Advanced poll creation interface with multiple options, time limits, and correct answer selection*
 
-### Poll Creation
-![Poll Creation](screenshots/poll-creation.png)
-*Design custom polls with multiple options and time limits*
+### Student Interface - Active Poll
+![Student Interface - Active Poll](https://i.imgur.com/example3.png)
+*Student view with active poll, countdown timer, and submit button*
 
-### Real-time Results
-![Real-time Results](screenshots/real-time-results.png)
-*Live voting results with progress bars and percentages*
+### Student Interface - Poll Results
+![Student Interface - Poll Results](https://i.imgur.com/example4.png)
+*Live voting results with progress bars, participant list, and chat functionality*
 
-### Chat System
-![Chat System](screenshots/chat-system.png)
-*Real-time communication between teachers and students*
+### Student Interface - Kicked Out
+![Student Interface - Kicked Out](https://i.imgur.com/example5.png)
+*Clean kicked out message with Intervue Poll branding*
+
+### Student Interface - Poll Selection
+![Student Interface - Poll Selection](https://i.imgur.com/example6.png)
+*Student view with poll options and selection interface*
 
 ## 🚀 Usage
 
