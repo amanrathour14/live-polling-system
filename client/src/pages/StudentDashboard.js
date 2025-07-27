@@ -44,7 +44,8 @@ const StudentDashboard = () => {
   }, []);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const socketUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const newSocket = io(socketUrl);
     setSocket(newSocket);
 
     return () => {

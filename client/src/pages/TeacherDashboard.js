@@ -29,30 +29,33 @@ const TeacherDashboard = () => {
   
   const navigate = useNavigate();
 
-  const fetchSessionInfo = useCallback(async () => {
-    if (!sessionId) return;
-    try {
-      const response = await fetch(`http://localhost:5000/api/sessions/${sessionId}`);
-      const data = await response.json();
-      setConnectedStudents(data.students || []);
-    } catch (error) {
-      console.error('Error fetching session info:', error);
-    }
-  }, [sessionId]);
+            const fetchSessionInfo = useCallback(async () => {
+            if (!sessionId) return;
+            try {
+              const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+              const response = await fetch(`${apiUrl}/api/sessions/${sessionId}`);
+              const data = await response.json();
+              setConnectedStudents(data.students || []);
+            } catch (error) {
+              console.error('Error fetching session info:', error);
+            }
+          }, [sessionId]);
 
-  const fetchPastPolls = useCallback(async () => {
-    if (!sessionId) return;
-    try {
-      const response = await fetch(`http://localhost:5000/api/sessions/${sessionId}/past-polls`);
-      const data = await response.json();
-      setPastPolls(data);
-    } catch (error) {
-      console.error('Error fetching past polls:', error);
-    }
-  }, [sessionId]);
+            const fetchPastPolls = useCallback(async () => {
+            if (!sessionId) return;
+            try {
+              const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+              const response = await fetch(`${apiUrl}/api/sessions/${sessionId}/past-polls`);
+              const data = await response.json();
+              setPastPolls(data);
+            } catch (error) {
+              console.error('Error fetching past polls:', error);
+            }
+          }, [sessionId]);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const socketUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const newSocket = io(socketUrl);
     setSocket(newSocket);
 
     return () => {
