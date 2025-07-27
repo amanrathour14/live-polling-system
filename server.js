@@ -373,9 +373,12 @@ app.get('/api/sessions/:sessionId/past-polls', (req, res) => {
   res.json(pastPollsList);
 });
 
+// Serve static files from the React app build directory
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 // Serve React app
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
