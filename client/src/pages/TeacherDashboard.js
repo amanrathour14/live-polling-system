@@ -10,7 +10,7 @@ const TeacherDashboard = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [currentPoll, setCurrentPoll] = useState(null);
   const [pollResults, setPollResults] = useState(null);
-  const [showCreatePoll, setShowCreatePoll] = useState(false);
+  //const [showCreatePoll, setShowCreatePoll] = useState(false);
   const [connectedStudents, setConnectedStudents] = useState([]);
   const [chatMessages, setChatMessages] = useState([]);
   const [showChat, setShowChat] = useState(false);
@@ -175,11 +175,7 @@ const TeacherDashboard = () => {
     });
   };
 
-  const handleEndPoll = () => {
-    if (currentPoll) {
-      socket.emit('end-poll', { pollId: currentPoll.id });
-    }
-  };
+ 
 
   const handleOptionChange = (index, value) => {
     const updatedOptions = [...newPoll.options];
